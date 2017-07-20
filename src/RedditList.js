@@ -8,7 +8,7 @@ class RedditList extends Component {
       reddits: []
     }
   }
-  async componentWillMount() {
+  async componentDidMount() {
     const redditData = await fetch('https://www.reddit.com/r/todayilearned.json')
       .then(data => data.json())
       .catch(err => console.log(err))
